@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<form method="POST" action="">  
+<div class="col-md-12 card card-body">
+    <div class="d-flex justify-content-end">
+        <a href="#" class="btn btn-success m-2"><i class="fa fa-plus mr-2" aria-hidden="true"></i>Ajouter</a>
+    </div>
+
+    <div class="col-md-12 card card-body">
+        <table class="table table-striped" id="myTable">
+            <thead>
+                <tr>
+                    <th>Nom</th> 
+                    <th>Prenom</th>
+                    <th>Sexe</th>
+                    <th>Contact</th>
+                    <th>Residence</th>
+                </tr>
+            </thead>
+
+            <tfoot>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prenom</th>
+                    <th>Sexe</th>
+                    <th>Contact</th>
+                    <th>Residence</th>
+                </tr>
+            </tfoot>
+            <tbody>
+               
+            </tbody>
+        </table>
+   
+    </div>
+    
+</div>
+
+</form>
+{% endblock %}
+
+{% block jsfiles %}
+<script>
+    $(document).ready(  function () {
+        console.log('shjfhkshkfhds')
+        $('#myTable').DataTable({
+            "order": [],
+            language: {
+                "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json",
+            },
+        });
+        $("#myTable tfoot th").each(function (i) {
+            if (!$("#myTable tfoot th").eq(i).hasClass("no-filter")) {
+
+                var select = $('<select class="form-control"><option value=""></option></select>')
+                    .appendTo($(this).empty())
+                    .on('change', function () {
+                        table.column(i)
+                            .search($(this).val())
+                            .draw();
+                    });
+
+                table.column(i).data().unique().sort().each(function (d, j) {
+                    select.append('<option value="' + d + '">' + d + '</option>')
+                });
+
+            }
+
+
+        });
+    })
+</script>
+{% endblock %}

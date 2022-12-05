@@ -1,0 +1,534 @@
+{%  load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="author" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Elitis</title>
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'assets/images/favicon.png '%}" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+
+    <!-- Template CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css '%}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap-select.min.css '%}">
+    <link rel="stylesheet" href="{% static 'assets/css/line-awesome.css %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css '%}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.theme.default.min.css '%}">
+    <link rel="stylesheet" href="{% static 'assets/css/jquery.fancybox.min.css '%}">
+    <link rel="stylesheet" href="{% static 'assets/css/daterangepicker.css '%}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.min.css '%}">
+    <link rel="stylesheet" href="{% static 'assets/css/animated-headline.css '%}">
+    <link rel="stylesheet" href="{% static 'assets/css/jquery-ui.css '%}">
+    <link rel="stylesheet" href="{% static 'assets/css/flag-icon.min.css '%}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css '%}">
+</head>
+
+<body>
+    <!-- start cssload-loader -->
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <svg class="spinner" viewBox="0 0 50 50">
+                <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+            </svg>
+        </div>
+    </div>
+    <!-- end cssload-loader -->
+
+    <!-- ================================
+            START HEADER AREA
+================================= -->
+    <header class="header-area">
+        <div class="header-top-bar padding-right-100px padding-left-100px">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="header-top-content">
+                            <div class="header-left">
+                                <ul class="list-items">
+                                    <li>
+                                        <a href="#">Appelez nous <i class="la la-phone mr-1"></i> 3440 / 3444 </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="la la-envelope mr-1"></i>commercial@elitisexpress.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="header-top-content">
+                            <div class="header-right d-flex align-items-center justify-content-end">
+                                <div class="header-right-action">
+                                    <div class="select-contain select--contain w-auto">
+                                        <select class="select-contain-select">
+                                            <option
+                                                data-content='<span class="flag-icon flag-icon-us mr-1"></span> English(US)'
+                                                selected>
+                                                English US
+                                            </option>
+                                            <option
+                                                data-content='<span class="flag-icon flag-icon-fr mr-1"></span> Francais'>
+                                                Francais
+                                            </option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="header-right-action">
+                                    <div class="select-contain select--contain w-auto">
+                                        <select class="select-contain-select">
+                                            <option value="1" selected>USD</option>
+                                            <option value="2">EUR</option>
+                                            <option value="3">XOF</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="header-right-action">
+                                    <a href="#" class="theme-btn theme-btn-small theme-btn-transparent mr-1"
+                                        data-toggle="modal" data-target="#signupPopupForm">S'inscrire</a>
+                                    <a href="#" class="theme-btn theme-btn-small" data-toggle="modal"
+                                        data-target="#loginPopupForm">Se
+                                        connecter</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-menu-wrapper padding-right-100px padding-left-100px">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="menu-wrapper">
+                            <a href="#" class="down-button"><i class="la la-angle-down"></i></a>
+                            <div class="logo">
+                                <a href="index.html"><img src="{% 'assets/images/logo.png '%}" alt="logo" /></a>
+                                <div class="menu-toggler">
+                                    <i class="la la-bars"></i>
+                                    <i class="la la-times"></i>
+                                </div>
+                                <!-- end menu-toggler -->
+                            </div>
+                            <!-- end logo -->
+                            <div class="main-menu-content">
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <a href="index.html">ACCUEIL</a>
+                                        </li>
+                                        <li>
+                                            <a href="services.html">SERVICES</a>
+                                        </li>
+                                        <li>
+                                            <a href="about.html">A PROPOS</a>
+                                        </li>
+                                        <li>
+                                            <a href="contact.html">CONTACT</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!-- end main-menu-content -->
+
+                        </div>
+                        <!-- end menu-wrapper -->
+                    </div>
+                    <!-- end col-lg-12 -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container-fluid -->
+        </div>
+        <!-- end header-menu-wrapper -->
+    </header>
+    <!-- ================================
+     END HEADER AREA
+================================= -->
+
+    <!-- ================================
+    START BREADCRUMB AREA
+================================= -->
+    <section class="breadcrumb-area bread-bg-recover">
+        <div class="breadcrumb-wrap">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="breadcrumb-content">
+                            <div class="section-heading">
+                                <h2 class="sec__title text-white">Récupérer mot de passe</h2>
+                            </div>
+                        </div><!-- end breadcrumb-content -->
+                    </div><!-- end col-lg-6 -->
+                    <div class="col-lg-6">
+                        <div class="breadcrumb-list text-right">
+                            <ul class="list-items">
+                                <li><a href="index.html">Accueil</a></li>
+                                <li>Pages</li>
+                                <li>Récupérer mot de passe</li>
+                            </ul>
+                        </div><!-- end breadcrumb-list -->
+                    </div><!-- end col-lg-6 -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </div><!-- end breadcrumb-wrap -->
+        <div class="bread-svg-box">
+            <svg class="bread-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none">
+                <polygon points="100 0 50 10 0 0 0 10 100 10"></polygon>
+            </svg>
+        </div><!-- end bread-svg -->
+    </section><!-- end breadcrumb-area -->
+    <!-- ================================
+    END BREADCRUMB AREA
+================================= -->
+
+    <!-- ================================
+    START CONTACT AREA
+================================= -->
+    <section class="contact-area padding-top-100px padding-bottom-70px">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 mx-auto">
+                    <div class="form-box">
+                        <div class="form-title-wrap">
+                            <h3 class="title">Récupérer mot de passe</h3>
+                            <p class="font-size-15 pt-2">Saisissez l'email de votre compte pour réinitialiser le mot de passe. 
+                                Ensuite, vous recevrez un lien vers votre e-mail pour réinitialiser le mot de passe. 
+                                Si vous rencontrez un problème concernant la réinitialisation du mot de passe
+                                <a href="contact.html" class="text-color">contactez nous</a>
+                            </p>
+                        </div><!-- form-title-wrap -->
+                        <div class="form-content ">
+                            <div class="contact-form-action">
+                                <form method="post">
+                                    <div class="input-box">
+                                        <label class="label-text">Votre Email</label>
+                                        <div class="form-group">
+                                            <span class="la la-envelope-o form-icon"></span>
+                                            <input class="form-control" type="email" name="email"
+                                                placeholder="Adresse email ici">
+                                        </div>
+                                    </div>
+                                    <div class="btn-box">
+                                        <button type="button" class="theme-btn">Récupérer</button>
+                                    </div>
+                                </form>
+                            </div><!-- end contact-form-action -->
+                        </div><!-- end form-content -->
+                    </div><!-- end form-box -->
+                </div><!-- end col-lg-8 -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </section><!-- end contact-area -->
+    <!-- ================================
+    END CONTACT AREA
+================================= -->
+
+    <!-- ================================
+       START FOOTER AREA
+================================= -->
+    <section class="footer-area section-bg padding-top-100px padding-bottom-30px">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-8 responsive-column">
+                    <div class="footer-item">
+                        <div class="footer-logo padding-bottom-30px">
+                            <a href="index.html" class="foot__logo"><img src="images/logo.png" alt="logo" /></a>
+                        </div>
+                        <!-- end logo -->
+                        <ul class="list-items pt-3">
+                            <li>
+                                Siege Ouaga 2000 / Gare OUAGA ZAD / GARE BOBO SECTEUR 25<br />
+                                Burkina Faso
+                            </li>
+                            <li><i class="la la-phone mr-1"></i> 70 21 05 21 / 07 21 05 21 / 58 44 44 44 </br> Call
+                                center 3440 / 3444</li>
+                            <li><a href="#">commercial@elitisexpress.com</a></li>
+                        </ul>
+                    </div>
+                    <!-- end footer-item -->
+                </div>
+                <!-- end col-lg-8 -->
+                <div class="col-lg-2 responsive-column">
+                    <div class="footer-item">
+                        <h4 class="title curve-shape pb-3 margin-bottom-20px" data-text="curvs">
+                            Compagnie
+                        </h4>
+                        <ul class="list-items list--items">
+                            <li><a href="about.html">A propos</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- end footer-item -->
+                </div>
+                <!-- end col-lg-2 -->
+                <div class="col-lg-2 responsive-column">
+                    <div class="footer-item">
+                        <h4 class="title curve-shape pb-3 margin-bottom-20px" data-text="curvs">
+                            Autres liens
+                        </h4>
+                        <ul class="list-items list--items">
+                            <li><a href="#">Gallerie</a></li>
+                            <li><a href="#">Notre service à bord</a></li>
+                            <li><a href="#">Notre réseau de routes</a></li>
+                        </ul>
+                    </div>
+                    <!-- end footer-item -->
+                </div>
+                <!-- end col-lg-2 -->
+
+            </div>
+            <!-- end row -->
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="term-box footer-item">
+                        <ul class="list-items list--items d-flex align-items-center">
+                            <li><a href="#">Termes & Conditions</a></li>
+                            <li><a href="#">Politique de confidentialité</a></li>
+                            <li><a href="#">Faqs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end col-lg-8 -->
+                <div class="col-lg-4">
+                    <div class="footer-social-box text-right">
+                        <ul class="social-profile">
+                            <li>
+                                <a href="#"><i class="lab la-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="lab la-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="lab la-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="lab la-linkedin-in"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end col-lg-4 -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+        <div class="section-block mt-4"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="copy-right padding-top-30px">
+                        <p class="copy__desc">
+                            &copy; Copyright Elitis 2022
+                        </p>
+                    </div>
+                    <!-- end copy-right -->
+                </div>
+                <!-- end col-lg-7 -->
+                <div class="col-lg-5">
+                    <div class="copy-right-content d-flex align-items-center justify-content-end padding-top-30px">
+                        <h3 class="title font-size-15 pr-2">Nous Acceptons</h3>
+                        <img src="{% static 'assets/images/payment-img.png' %}" alt="" />
+                    </div>
+                    <!-- end copy-right-content -->
+                </div>
+                <!-- end col-lg-5 -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </section>
+    <!-- end footer-area -->
+    <!-- ================================
+   END FOOTER AREA
+================================= -->
+
+    <!-- start back-to-top -->
+    <div id="back-to-top">
+        <i class="la la-angle-up" title="Go top"></i>
+    </div>
+    <!-- end back-to-top -->
+
+    <!-- end modal-shared -->
+    <div class="modal-popup">
+        <div class="modal fade" id="signupPopupForm" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="modal-title title" id="exampleModalLongTitle">
+                                INSCRIPTION
+                            </h5>
+                            <p class="font-size-14">Salut! Bienvenue</p>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" class="la la-close"></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="contact-form-action">
+                            <form method="post">
+                                <!-- end input-box -->
+                                <div class="input-box">
+                                    <label class="label-text">Adresse email</label>
+                                    <div class="form-group">
+                                        <span class="la la-envelope form-icon"></span>
+                                        <input class="form-control" type="email" name="text" placeholder="Email ici" />
+                                    </div>
+                                </div>
+                                <!-- end input-box -->
+                                <div class="input-box">
+                                    <label class="label-text">Mot de passe</label>
+                                    <div class="form-group">
+                                        <span class="la la-lock form-icon"></span>
+                                        <input class="form-control" type="password" name="password"
+                                            placeholder="Votre mot de passe ici" />
+                                    </div>
+                                </div>
+                                <!-- end input-box -->
+                                <div class="input-box">
+                                    <label class="label-text">Confirmer Mot de passe</label>
+                                    <div class="form-group">
+                                        <span class="la la-lock form-icon"></span>
+                                        <input class="form-control" type="password" name="confirm-password"
+                                            placeholder="Mot de passe ici" />
+                                    </div>
+                                </div>
+                                <!-- end input-box -->
+                                <div class="btn-box pt-3 pb-4">
+                                    <button type="button" class="theme-btn w-100">
+                                        S'inscrire
+                                    </button>
+                                </div>
+                                <div class="action-box text-center">
+                                    <p class="font-size-14">Ou inscrivez vous avec</p>
+                                    <ul class="social-profile py-3">
+                                        <li>
+                                            <a href="#" class="bg-5 text-white"><i class="lab la-facebook-f"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="bg-6 text-white"><i class="lab la-twitter"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="bg-7 text-white"><i class="lab la-instagram"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="bg-5 text-white"><i class="lab la-linkedin-in"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- end contact-form-action -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end modal-popup -->
+
+    <!-- end modal-shared -->
+    <div class="modal-popup">
+        <div class="modal fade" id="loginPopupForm" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="modal-title title" id="exampleModalLongTitle2">
+                                CONNEXION
+                            </h5>
+                            <p class="font-size-14">Salut! Bienvenue</p>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" class="la la-close"></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="contact-form-action">
+                            <form method="post">
+                                <div class="input-box">
+                                    <label class="label-text">Email</label>
+                                    <div class="form-group">
+                                        <span class="la la-user form-icon"></span>
+                                        <input class="form-control" type="email" name="email" placeholder="Email ici" />
+                                    </div>
+                                </div>
+                                <!-- end input-box -->
+                                <div class="input-box">
+                                    <label class="label-text">Mot de passe</label>
+                                    <div class="form-group mb-2">
+                                        <span class="la la-lock form-icon"></span>
+                                        <input class="form-control" type="password" name="password"
+                                            placeholder="Votre mot de passe ici" />
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="custom-checkbox mb-0">
+                                            <input type="checkbox" id="rememberchb" />
+                                            <label for="rememberchb">Se rappeler de moi</label>
+                                        </div>
+                                        <p class="forgot-password">
+                                            <a href="recover.html">Mot de passe oublié ?</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- end input-box -->
+                                <div class="btn-box pt-3 pb-4">
+                                    <button type="button" class="theme-btn w-100">
+                                        Se connecter
+                                    </button>
+                                </div>
+                                <div class="action-box text-center">
+                                    <p class="font-size-14">Ou connectez vous avec</p>
+                                    <ul class="social-profile py-3">
+                                        <li>
+                                            <a href="#" class="bg-5 text-white"><i class="lab la-facebook-f"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="bg-6 text-white"><i class="lab la-twitter"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="bg-7 text-white"><i class="lab la-instagram"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="bg-5 text-white"><i class="lab la-linkedin-in"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- end contact-form-action -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end modal-popup -->
+
+    <!-- Template JS Files -->
+    <script src="{% static 'assets/js/jquery-3.4.1.min.js '%}"></script>
+    <script src="{% static 'assets/js/jquery-ui.js '%}"></script>
+    <script src="{% static 'assets/js/popper.min.js '%}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js '%}"></script>
+    <script src="{% static 'assets/js/bootstrap-select.min.js '%}"></script>
+    <script src="{% static 'assets/js/moment.min.js '%}"></script>
+    <script src="{% static 'assets/js/daterangepicker.js '%}"></script>
+    <script src="{% static 'assets/js/owl.carousel.min.js '%}"></script>
+    <script src="{% static 'assets/js/jquery.fancybox.min.js '%}"></script>
+    <script src="{% static 'assets/js/jquery.countTo.min.js '%}"></script>
+    <script src="{% static 'assets/js/animated-headline.js '%}"></script>
+    <script src="{% static 'assets/js/jquery.ripples-min.js '%}"></script>
+    <script src="{% static 'assets/js/main.js '%}></script>
+</body>
+
+<!-- Mirrored from techydevs.com/demos/trizen/html/recover.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 16 Nov 2022 23:39:58 GMT -->
+
+</html>
