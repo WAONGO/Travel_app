@@ -3,6 +3,7 @@ from .views import chauffeur
 
 app_name = 'Adminpanel'
 urlpatterns = [
+    path('', chauffeur.home, name='Adminpanel'),
     path('chauffeurs', chauffeur.chauffeur_list, name='chauffeur_list'),
 
     path('chauffeur-ajout', chauffeur.addchauffeur, name="add_chauffeur"),

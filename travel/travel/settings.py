@@ -39,8 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Adminpanel',
     'Design',
+    'Adminpanel',
+
 
 ]
 
@@ -59,10 +60,11 @@ ROOT_URLCONF = 'travel.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'Adminpanel/templates'),
-                 os.path.join(BASE_DIR, 'Design/templates'),
+        'DIRS': [
+            #os.path.join(BASE_DIR, 'Adminpanel/templates'),
+            os.path.join(BASE_DIR, "templates"),
 
-                 ],
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

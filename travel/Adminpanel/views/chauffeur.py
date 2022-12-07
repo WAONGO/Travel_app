@@ -17,7 +17,11 @@ from django.http import HttpResponse
 from django.contrib.auth.models import Group
 
 
+def home(request):
+    return render(request, "base.html")
 # @login_required
+
+
 def chauffeur_list(request):
     chauffeurs = Chauffeurs.objects.all().order_by("-id")
     context = {
