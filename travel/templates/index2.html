@@ -136,14 +136,14 @@
                   </div>
                   <div class="header-right-action">
                     <a
-                      href="#"
+                      href="{% url 'auths:register' %}"
                       class="theme-btn theme-btn-small theme-btn-transparent mr-1"
                       data-toggle="modal"
                       data-target="#signupPopupForm"
                       >S'inscrire</a
                     >
                     <a
-                      href="#"
+                      href="{% url 'auths:connexion' %}"
                       class="theme-btn theme-btn-small"
                       data-toggle="modal"
                       data-target="#loginPopupForm"
@@ -1044,7 +1044,7 @@
           <div class="col-lg-8 responsive-column">
             <div class="footer-item">
               <div class="footer-logo padding-bottom-30px">
-                <a href="index.html" class="foot__logo"
+                <a href="index2.html" class="foot__logo"
                   ><img src="{% static 'assets/images/logo.png ' %}" alt="logo"
                 /></a>
               </div>
@@ -1193,7 +1193,7 @@
                 <h5 class="modal-title title" id="exampleModalLongTitle">
                   INSCRIPTION
                 </h5>
-                <p class="font-size-14">Salut! Bienvenue</p>
+                <p class="font-size-14"> Bienvenue Chez elitisexpress</p>
               </div>
               <button
                 type="button"
@@ -1205,9 +1205,11 @@
               </button>
             </div>
             <div class="modal-body">
-              <div class="contact-form-action">
-                <form method="post">
+            <div class="contact-form-action">
+              <form action="{% url 'auths:register' %}" method="POST">
+                {% csrf_token %}
                   <!-- end input-box -->
+                  
                   <div class="input-box">
                     <label class="label-text">Adresse email</label>
                     <div class="form-group">
@@ -1300,6 +1302,12 @@
           <div class="modal-content">
             <div class="modal-header">
               <div>
+                <div class="btn-box pt-3 pb-4">
+                  <input
+                    type="hidden"
+                    name="next"
+                    value="{{ request.GET.next }}"
+                  />
                 <h5 class="modal-title title" id="exampleModalLongTitle2">
                   CONNEXION
                 </h5>
@@ -1316,7 +1324,8 @@
             </div>
             <div class="modal-body">
               <div class="contact-form-action">
-                <form method="post">
+                <form action="{% url 'auths:connexion' %}" method="POST">
+                  {% csrf_token %}
                   <div class="input-box">
                     <label class="label-text">Email</label>
                     <div class="form-group">
@@ -1357,7 +1366,12 @@
                   </div>
                   <!-- end input-box -->
                   <div class="btn-box pt-3 pb-4">
-                    <button type="button" class="theme-btn w-100">
+                    <input
+                      type="hidden"
+                      name="next"
+                      value="{{ request.GET.next }}"
+                    />
+                    <button type="submit" class="theme-btn w-100">
                       Se connecter
                     </button>
                   </div>
