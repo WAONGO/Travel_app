@@ -9,7 +9,8 @@ from django.urls.base import reverse
 from django.contrib.auth.models import Group
 from Adminpanel.models import Visiteur
 
-from auths.forms import LoginForm, VisiteurForm
+from auths.forms import LoginForm
+from auths.forms import  VisiteurForm
 from Adminpanel.forms import UserForm
 from django.contrib import messages
 from travel import settings
@@ -32,7 +33,7 @@ def connexion(request):
                 if flag:
                     login(request, user=user)
                     messages.success(request, settings.SUCCESS_MESSAGE)
-                    return redirect('index2.html')
+                    return redirect('login.html')
 
         else:
             form = LoginForm()
@@ -40,7 +41,7 @@ def connexion(request):
     context = {
         'form': form
     }
-    return render(request, 'index2.html', context)
+    return render(request, 'login.html', context)
 
 
 def register(request):
@@ -50,8 +51,8 @@ def register(request):
     if request.method == 'POST':
         form = VisiteurForm(request.POST)
         if form.is_valid():
-            visiteur = form.save(commit=False)
-            _user = userform.save(commit=False)
+            visiteur = form.save()
+            _user = userform.save()
 
             _user.save()
             visiteur.user = _user
@@ -61,9 +62,9 @@ def register(request):
             _user.groups.add(user_group)
 
             messages.success(request, settings.SUCCESS_MESSAGE)
-            return redirect('auths:connexion')
+            return redirect('login.html')
         else:
-            print(form.errors)
+            
             form = VisiteurForm()
     context = {
         'form': form

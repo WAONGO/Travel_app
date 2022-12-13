@@ -109,10 +109,9 @@ class Visiteur(models.Model):
     nom = models.CharField(max_length=128)
     prenom = models.CharField(max_length=128)
     ville = models.CharField(max_length=128)
-    residence = models.CharField(max_length=128)
     contact = models.IntegerField()
     email = models.EmailField(blank=True, null=True)
-    sexe = models.CharField(max_length=128)
+    
 
     def __str__(self):
         return str(self.nom + " "+self.prenom)
