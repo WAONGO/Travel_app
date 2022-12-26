@@ -136,14 +136,14 @@
                   </div>
                   <div class="header-right-action">
                     <a
-                      href="{% url 'auths:register' %}"
+                      href="{% url 'auths:registerPage' %}"
                       class="theme-btn theme-btn-small theme-btn-transparent mr-1"
                       data-toggle="modal"
                       data-target="#signupPopupForm"
                       >S'inscrire</a
                     >
                     <a
-                      href="{% url 'auths:connexion' %}"
+                      href="{% url 'auths:connectUser' %}"
                       class="theme-btn theme-btn-small"
                       data-toggle="modal"
                       data-target="#loginPopupForm"
@@ -192,6 +192,8 @@
                       <li>
                         <a href="{% url 'Design:contact' %}">CONTACT</a>
                       </li>
+                      <li ><a href="{% url 'auths:connectUser' %}" >Login/Sign Up</a></li>
+                      <li ><a href="{% url 'auths:registerPage' %}" >Sign Up</a></li>
                     </ul>
                   </nav>
                 </div>
@@ -1206,8 +1208,8 @@
             </div>
             <div class="modal-body">
             <div class="contact-form-action">
-              <form action="{% url 'auths:register' %}" method="POST">
-                {% csrf_token %}
+              <form action="" method="POST">
+                
                   <!-- end input-box -->
                   
                   <div class="input-box">
@@ -1354,7 +1356,7 @@
                   <input
                     type="hidden"
                     name="next"
-                    value="{{ request.GET.next }}"
+                    value=""
                   />
                 <h5 class="modal-title title" id="exampleModalLongTitle2">
                   CONNEXION
@@ -1372,8 +1374,7 @@
             </div>
             <div class="modal-body">
               <div class="contact-form-action">
-                <form action="{% url 'auths:connexion' %}" method="POST">
-                  {% csrf_token %}
+                <form  method="">
                   <div class="input-box">
                     <label class="label-text">Email</label>
                     <div class="form-group">
@@ -1403,7 +1404,7 @@
                     >
                       <div class="custom-checkbox mb-0">
                         <input type="checkbox" id="rememberchb" />
-                        <label for="rememberchb">Se rappeler de moi</label>
+                        <label for="rememberchb">  Se rappeler de moi</label>
                       </div>
                       <p class="forgot-password">
                         <a href="{% url 'Design:recover' %}"
@@ -1417,9 +1418,10 @@
                     <input
                       type="hidden"
                       name="next"
-                      value="{{ request.GET.next }}"
+                      value=""
                     />
                     <button type="submit" class="theme-btn w-100">
+                      
                       Se connecter
                     </button>
                   </div>

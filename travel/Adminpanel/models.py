@@ -71,11 +71,11 @@ def __str__(self):
 
 
 class Ticket(models.Model):
+    nomPassager= models.ManyToManyField("Reservation")
     numero = models.IntegerField()
     numero_car = models.ForeignKey("Car", on_delete=models.CASCADE)
-    prix = models.IntegerField()
-    scale = models.ForeignKey(
-        "Gare",  on_delete=models.CASCADE, blank=True, null=True)
+    frais = models.IntegerField()
+    
     numero_chaise = models.IntegerField()
     heure_depart = models.DateTimeField(auto_now_add=True)
     heure_arrive = models.DateTimeField(auto_now_add=True)
@@ -83,21 +83,6 @@ class Ticket(models.Model):
 
 def __str__(self):
     return self.numero
-
-
-# le model de reservation
-class Reservation (models.Model):
-    code = models.CharField(max_length=50, blank=True, null=True)
-    assistant = models.ForeignKey(
-        "Agent",  on_delete=models.CASCADE, blank=True, null=True)
-    prix = models.IntegerField()
-    nom_gare = models.ForeignKey(
-        "Gare",  on_delete=models.CASCADE, blank=True, null=True)
-    trajet = models.CharField(max_length=50)
-    numero_car = models.ForeignKey("Car", on_delete=models.CASCADE)
-    numero_chaise = models.ForeignKey("Ticket", on_delete=models.CASCADE)
-    heure_depart = models.DateTimeField(auto_now_add=True)
-    heure_arrive = models.DateTimeField(auto_now_add=True)
 
 
 def __str__(self):
@@ -112,6 +97,27 @@ class Visiteur(models.Model):
     contact = models.IntegerField()
     email = models.EmailField(blank=True, null=True)
     
+    
+    
 
     def __str__(self):
-        return str(self.nom + " "+self.prenom)
+        return str(self.nom )
+    
+class Reservation(models.Model):
+    nom = models.CharField( max_length=50)
+    prenom = models.CharField( max_length=50)
+    email = models.EmailField( max_length=254)
+    carteid= models.CharField( max_length=50)
+    trajet = models.CharField( max_length=50)
+    creneau = models.CharField( max_length=50)
+    prix = models.IntegerField()
+    telephone = models.IntegerField()
+    addresse = models.CharField( max_length=50)
+    pays = models.CharField( max_length=50)
+    code = models.IntegerField()
+    
+    def __init__(self):
+        return str(self.nom)
+    
+    
+

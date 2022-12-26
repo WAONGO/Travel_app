@@ -4,7 +4,7 @@ from Adminpanel.models import Visiteur
 
 
 class LoginForm(forms.Form):
-    email = forms.CharField(required=True)
+    email = forms.EmailField( widget=forms.EmailInput,required=True)
     password = forms.CharField(widget=forms.PasswordInput, required=True)
 
 
