@@ -23,4 +23,5 @@ urlpatterns = [
     path('Adminpanel/', include('Adminpanel.urls')),
     path('', include('Design.urls')),
     path('', include('auths.urls')),
+    path('', include('Booking.urls')),
 ]

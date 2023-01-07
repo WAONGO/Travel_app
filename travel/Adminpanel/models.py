@@ -1,4 +1,3 @@
-from operator import truediv
 from django.db import models
 from django.conf import settings
 from django.contrib.auth.models import User
@@ -68,27 +67,15 @@ def __str__(self):
     return self.nom
 
 # le model de ticket
-
-
 class Ticket(models.Model):
-    nomPassager= models.ManyToManyField("Reservation")
-    numero = models.IntegerField()
-    numero_car = models.ForeignKey("Car", on_delete=models.CASCADE)
-    frais = models.IntegerField()
+    passenger_name = models.CharField(max_length=255)
+    ticket_number = models.CharField(max_length=255)
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+    destination = models.CharField(max_length=255)
     
-    numero_chaise = models.IntegerField()
-    heure_depart = models.DateTimeField(auto_now_add=True)
-    heure_arrive = models.DateTimeField(auto_now_add=True)
-
 
 def __str__(self):
-    return self.numero
-
-
-def __str__(self):
-    return self.code
-
-
+    return self.passenger_name
 class Visiteur(models.Model):
     user = models.OneToOneField(User, null=False, on_delete=models.CASCADE)
     nom = models.CharField(max_length=128)
@@ -101,23 +88,9 @@ class Visiteur(models.Model):
     
 
     def __str__(self):
-        return str(self.nom )
+        return self.nom 
     
-class Reservation(models.Model):
-    nom = models.CharField( max_length=50)
-    prenom = models.CharField( max_length=50)
-    email = models.EmailField( max_length=254)
-    carteid= models.CharField( max_length=50)
-    trajet = models.CharField( max_length=50)
-    creneau = models.CharField( max_length=50)
-    prix = models.IntegerField()
-    telephone = models.IntegerField()
-    addresse = models.CharField( max_length=50)
-    pays = models.CharField( max_length=50)
-    code = models.IntegerField()
-    
-    def __init__(self):
-        return str(self.nom)
+
     
     
 

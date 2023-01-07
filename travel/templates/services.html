@@ -131,17 +131,15 @@
                   </div>
                   <div class="header-right-action">
                     <a
-                      href="#"
+                      href="{% url 'auths:registerPage' %}"
                       class="theme-btn theme-btn-small theme-btn-transparent mr-1"
-                      data-toggle="modal"
-                      data-target="#signupPopupForm"
+                      
                       >S'inscrire</a
                     >
                     <a
-                      href="#"
+                      href="{% url 'auths:connectUser' %}"
                       class="theme-btn theme-btn-small"
-                      data-toggle="modal"
-                      data-target="#loginPopupForm"
+                      
                       >Se connecter</a
                     >
                   </div>

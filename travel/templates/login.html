@@ -106,9 +106,7 @@
 					</form>
 
 				</div>
-                {%   for message in messages  %}
-				<p  id="messages">{{ messages}}</p>
-				{%   endfor   %}
+                
 				<div class="mt-4">
 					<div class="d-flex justify-content-center links">
 						Vous n'avez pas compte? <a href="{% url 'auths:registerPage' %}" class="ml-2">S'inscrire</a>

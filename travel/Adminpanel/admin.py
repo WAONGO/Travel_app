@@ -1,6 +1,6 @@
 from django.contrib import admin
 import site
-from Adminpanel.models import Chauffeurs, Car,  Gare, Agent
+from Adminpanel.models import (Chauffeurs, Car,  Gare, Agent, Ticket)
 
 # Register your models here.
 admin.site.site_header = 'ELITIS Express'
@@ -9,3 +9,4 @@ admin.site.register(Chauffeurs)
 admin.site.register(Car)
 admin.site.register(Gare)
 admin.site.register(Agent)
+admin.site.register(Ticket)
